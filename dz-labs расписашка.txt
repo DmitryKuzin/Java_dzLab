@@ -1,0 +1,23 @@
+mon 17.00 1301
+fri 17.00 1309
+
+Homework 1
+we have a library
+the books in lib are sored
+every book has author
+every author has red a lot of books
+Map<City,<String authorName,List<Book>>>
+List of books should be sorted by  date of publication
+Book{
+	String ISBN//uniqe id of book
+	String name
+	Date d
+}
+library implements iLibrary{
+	void addBook(Book){}
+	List get(Author){}
+	List getAll(){}
+	boolean remove(Author,ISBN){}
+}
+interface iLibrary{}
+Main{} test class

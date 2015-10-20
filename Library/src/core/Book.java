@@ -1,5 +1,6 @@
 package core;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +8,7 @@ import java.util.Date;
 /**
  * Created by kuzin on 9/21/2015.
  */
-public class Book implements Comparable<Book>{
+public class Book implements Comparable<Book>,Serializable{
     public Book(){}
     public Book(String isbn,String name,String date_ddMMyyyy){
         setISBN(isbn);

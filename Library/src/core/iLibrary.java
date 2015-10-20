@@ -1,6 +1,7 @@
 package core;
 
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.TreeMap;
 import java.util.TreeSet;

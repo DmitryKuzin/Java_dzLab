@@ -3,6 +3,7 @@ package core;
 import core.Author;
 import core.Book;
 import core.Library;
+import file.Writer;
 
 import java.util.TreeSet;
 
@@ -24,9 +25,9 @@ public class Main {
 
         Pushkin.addBook(new Book("111","Evgeniy Onegin","11.12.1812"));
         Pushkin.addBook(new Book("113", "Fairytails", "12.01.1888"));
-        Gogol.addBook(new Book("112","Dead souls","10.11.1812"));
+        Gogol.addBook(new Book("112", "Dead souls", "10.11.1812"));
         Gogol.addBook(new Book("114", "Idiot", "01.01.1799"));
-        Tolstoy.addBook(new Book("110","Peace and War","07.07.1807"));
+        Tolstoy.addBook(new Book("110", "Peace and War", "07.07.1807"));
 
         lib.addAuthor(Pushkin);
         lib.addAuthor(Gogol);
@@ -37,8 +38,16 @@ public class Main {
         lib2.addAuthor(Tolstoy);
         arr.setLib(d, lib2);
 
-        lib.removeBook(Pushkin,"111");
+        lib.removeBook(Pushkin, "111");
 
+        try {
+            Writer.writeLib(lib);
+            Writer.writeLib(lib2);
+            Writer.writeLibXml(lib);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         System.out.println("Allright");
     }
 }

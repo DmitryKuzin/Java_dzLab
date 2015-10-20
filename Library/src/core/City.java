@@ -1,5 +1,7 @@
 package core;
 
+import java.io.Serializable;
+
 /**
  * Created by kuzin on 9/22/2015.
  */

@@ -1,9 +1,11 @@
 package core;
 
+import java.io.Serializable;
+
 /**
  * Created by kuzin on 9/22/2015.
  */
-public class iKey implements Comparable {
+public class iKey implements Comparable,Serializable {
     String keyVariable;
     @Override
     public int compareTo(Object o) {

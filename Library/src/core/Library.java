@@ -4,6 +4,7 @@ import core.Author;
 import core.Book;
 import core.iLibrary;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
@@ -12,7 +13,7 @@ import java.util.TreeSet;
 /**
  * Created by kuzin on 9/21/2015.
  */
-public class Library implements iLibrary {
+public class Library implements iLibrary,Serializable {
     public Library(){}
     public Library(String name){
         setName(name);
@@ -23,6 +24,10 @@ public class Library implements iLibrary {
 
     private TreeMap<Author,TreeSet<Book>> library=new TreeMap<>();
     private String name;
+
+    public TreeMap<Author,TreeSet<Book>> getLibrary(){
+        return library;
+    }
     @Override
     public void setName(String n) {
         name=n;
